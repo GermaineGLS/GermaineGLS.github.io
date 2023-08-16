@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Germaine's Online Store</title>
+    <style>
+        body {
+            font-family: 'Dancing Script', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #fce8f3;
+            color: #808080;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1.5rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+        .product {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .product h2 {
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+        }
+        .product p {
+            color: #777777;
+            margin-bottom: 10px;
+        }
+        .price {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        button {
+            background-color: #e74c3c;
+            color: #ffffff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #c0392b;
+        }
+        footer {
+            background-color: #fce8f3;
+            color: #808080;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Germaine's Online Store</h1>
+    </header>
+    <div class="container">
+        <div class="product">
+            <img src="data:image/jpeg;base64,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" alt="Product 1">
+            <h2>RoundLab Sunscreen</h2>
+            <p>Protect your skin.</p>
+            <p class="price">$20.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/81fAUraxMJL.jpg" alt="Product 2">
+            <h2>Dog Bandana</h2>
+            <p>Fashion but for your dog.</p>
+            <p class="price">$10.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPiHSYTJGXDt5TsQmeLcs_t2OU7V9-tFLWrw&usqp=CAU" alt="Product 2">
+            <h2>Hydroflask</h2>
+            <p>Stay hydrated.</p>
+            <p class="price">$60.00</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Germaine's Online Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
